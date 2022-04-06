@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtBetType"
+        android:layout_width="142dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/bet_type_text"
+        app:layout_constraintBottom_toTopOf="@+id/spnBetType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spnBetType"
+        android:layout_width="261dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TableLayout
+        android:id="@+id/tblSelections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnBetType">
+
+        <TableRow
+            android:id="@+id/row0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DFDEDE">
+
+            <TextView
+                android:id="@+id/txtSelNumExample"
+                android:layout_width="82dp"
+                android:layout_height="match_parent"
+                android:contentDescription="Selection Number"
+                android:padding="16dp"
+                android:text="#"
+                android:textAlignment="center"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/txtSelOddsExample"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:text="Odds"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtSelOutExample"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:text="Outcome"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/laySelectNum1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtSelectionNo1"
+                    android:layout_width="82dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Text1"
+                    android:padding="16dp"
+                    android:text="# 1"
+                    android:textAlignment="center">
+
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOdds1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/inPrice1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="3"
+                    android:hint="13"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    tools:ignore="DuplicateClickableBoundsCheck" />
+
+                <EditText
+                    android:id="@+id/inPrice1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="101dp"
+                    android:ems="3"
+                    android:hint="8"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txtDivider1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="78dp"
+                    android:layout_marginTop="11dp"
+                    android:text="/"
+                    android:textSize="20dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOutcome1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/spnBetOutcome1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/laySelectNum2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtSelectionNo2"
+                    android:layout_width="82dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Text1"
+                    android:padding="16dp"
+                    android:text="# 2"
+                    android:textAlignment="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOdds2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/inPrice2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="3"
+                    android:hint="11"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    tools:ignore="DuplicateClickableBoundsCheck" />
+
+                <EditText
+                    android:id="@+id/inPrice2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="101dp"
+                    android:ems="3"
+                    android:hint="4"
+                    android:inputType="number"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/txtDivider2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="78dp"
+                    android:layout_marginTop="11dp"
+                    android:text="/"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOutcome2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Spinner
+                    android:id="@+id/spnBetOutcome2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/laySelectNum3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtSelectionNo3"
+                    android:layout_width="82dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Text1"
+                    android:padding="16dp"
+                    android:text="# 3"
+                    android:textAlignment="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOdds3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/inPrice3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="3"
+                    android:hint="3"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    tools:ignore="DuplicateClickableBoundsCheck" />
+
+                <EditText
+                    android:id="@+id/inPrice3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="101dp"
+                    android:ems="3"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/txtDivider3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="78dp"
+                    android:layout_marginTop="11dp"
+                    android:text="/"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layOutcome3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/spnBetOutcome3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </FrameLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtboxWinnings"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="Winnings (£):"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/txtWinnings"
+        android:layout_width="97dp"
+        android:layout_height="25dp"
+        android:hint="78.75"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtboxWinnings"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/txtStake"
+        android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Stake (£):"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblSelections"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="176dp"
+        android:onClick="calcBet"
+        android:text="Calculate Winnings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblSelections"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <EditText
+        android:id="@+id/inStake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:ems="4"
+        android:hint="30"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtStake"
+        app:layout_constraintTop_toBottomOf="@+id/tblSelections"
+        app:layout_constraintVertical_bias="0.052" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

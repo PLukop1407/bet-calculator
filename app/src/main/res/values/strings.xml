@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bet Calculator</string>
+    <string name="bet_type_text">Select your Bet Type</string>
+</resources>
